@@ -9,6 +9,8 @@ import Login from './pages/Login';
 import Checkout from './pages/Checkout';
 import Product from './pages/Product';
 import './App.css'
+import Footer from './components/Footer/Footer';
+import Footer2 from './components/Footer/Footer2';
 
 function App() {
   
@@ -26,6 +28,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         
         </Routes>
+        <Footer/>
     </>
   )
 }
