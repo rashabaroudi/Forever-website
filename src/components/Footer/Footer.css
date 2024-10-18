@@ -1,0 +1,118 @@
+
+.footer{
+    background-color: #efefef;
+    display: flex;
+    border-color: #e5e7eb;
+    padding: 20px 100px;
+   align-items: center;
+   justify-content: space-between;
+    width: 100vw;
+    gap: 10px;
+    margin: 10px auto!important;
+    
+}
+.section_1{
+    max-width: 300px;
+    margin: auto;
+
+}
+
+p.title_footer{
+    color:#4d5867;
+    margin-top: 10px ;
+    line-height: 30px;
+    font-size: 1rem;
+}
+.head_footer{
+    
+    font-weight:600 ;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.services{
+    max-width: 200px;
+    margin: auto;
+
+}
+.contact_footer{
+    max-width: 200px;
+    margin: auto;
+    /* margin-bottom: 10px; */
+}
+ul{
+    list-style: none;
+}
+.img_footer{
+    width: 128px;
+
+}
+ ul.list_footer {
+    font-size: 14px;
+    color:#4d5867!important;
+
+}
+ul.list_footer li{
+    padding: 5px 0;
+}
+ul.list_footer li a{
+    padding:5px 0 ;
+    position: relative;
+    transition: transform 1s  ease .1s;
+
+
+
+}
+ul.list_footer li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: rgb(63, 56, 56);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease, transform 0.3s ease;
+}
+
+ul.list_footer li a:hover::after {
+    width:100%; /* يجعل الخط بنفس طول الكلمة */
+    transform: translateX(4px); /*يحرك الخط عند التحويم*/
+}
+ul.list_footer li:hover{
+    cursor: pointer;
+    transform: translateX(10px); /* يحرك الخط عند التحويم */
+
+ }
+
+
+@media screen and (mix-width:600px) and (max-width:900px) {
+    html{
+        font-size: 12px;
+    }
+    
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin: 30px auto!important;
+        align-items: center;
+        text-align: center;
+    }
+    
+}
+@media screen  and (max-width:600px) {
+    html{
+        font-size: 10px;
+    }
+    
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin: 30px auto;
+        align-items: flex-start;
+        text-align: center;
+    }
+    .section_1,.services,.contact_footer{
+        min-width: 150px;
+    }
+}
