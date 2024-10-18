@@ -91,24 +91,44 @@ const Navbar = () => {
            
         </div>
 
-        <div onClick={()=>{setShowNav(!showNav)}} className='z-10 md:hidden'>
-           {showNav ? <img src={crossIcon} width={25} height={25}/> : <img src={menuIcon} width={25} height={25}/>} 
+        <div onClick={()=>{setShowNav(!showNav)}} className='z-10 md:hidden cursor-pointer'>
+           {showNav ? <img src={crossIcon} width={25} height={25}/> : <img src={menuIcon}  width={25} height={25}/>} 
           </div>
-            {showNav && (
 
 
-                <ul className=' flex flex-col justify-center items-center absolute gap-[20px]  text-gray-950 top-0 left-0 w-1/2 h-1/2 right-[-100px]'>
-                {links.map(({id,link,route}) => (
-              <NavLink to={route} className=' flex flex-col  items-center px-4 cursor-pointer hover:scale-125 duration-200'>
-               <p className='font-thin font-signature uppercase '>{link}</p>
-               <hr className='hidden text-black w-2/4 items-center font-bold'/>
+          {/* sidebar menu for small devices */}
+             {showNav && (
+        
+               <ul className=' flex flex-col  items-center  absolute gap-[40px] bg-fuchsia-300
+                 text-gray-950 right-0 bottom-0 transition-all overflow-hidden h-screen '>
+              <div className='flex flex-row items-center justify-center gap-4 '>
 
-              </NavLink>
-              
-             ))}
+                <Link  to='login' className=' cursor-pointer text-center items-center  m-10'>
+                        
+                        <img src={profileIcon} width={65} height={65} className='border rounded-full p-2' />
+                        <span>profile</span>
+                  
+                </Link>
+             
+              </div>
+            
 
-                </ul>
+                    {links.map(({id,link,route}) => (
+                  <NavLink to={route} className=' flex flex-col  w-[100%] items-center px-4 py-4  border-b  cursor-pointer hover:scale-105 duration-200'>
+                  <p className='text-3xl text-gray-950 font-thin font-signature uppercase '>{link}</p>
+                  
+
+                  </NavLink>
+                  
+                ))}
+
+               </ul>
+
+               
+
+               
             )}
+
          
    
 
