@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')).render(
 
     <Navbar/>
     <App />
-    <Footer/>
+    {/* <Footer/> */}
     </div>
     
     </BrowserRouter>
